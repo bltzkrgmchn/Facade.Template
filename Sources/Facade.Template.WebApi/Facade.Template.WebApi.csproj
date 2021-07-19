@@ -12,9 +12,6 @@
         <DocumentationFile>.\Facade.Template.WebApi.xml</DocumentationFile>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Facade.Template.Consumers\Facade.Template.Consumers.csproj" />
-    </ItemGroup>
-    <ItemGroup>
         <AdditionalFiles Include="$(SolutionDir)\stylecop.json" />
     </ItemGroup>
     <ItemGroup>

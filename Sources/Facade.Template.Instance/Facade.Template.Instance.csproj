@@ -33,8 +33,6 @@
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Facade.Template.Consumers\Facade.Template.Consumers.csproj" />
-        <ProjectReference Include="..\Facade.Template.Data\Facade.Template.Data.csproj" />
         <ProjectReference Include="..\Facade.Template.WebApi\Facade.Template.WebApi.csproj" />
     </ItemGroup>
     <ItemGroup>

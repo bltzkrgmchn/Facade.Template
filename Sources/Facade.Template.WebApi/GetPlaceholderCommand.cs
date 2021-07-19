@@ -1,9 +1,9 @@
-﻿namespace Facade.Template.Data
+﻿namespace Facade.Template.WebApi
 {
     /// <summary>
-    /// Placeholder.
+    /// Команда получения Placeholder.
     /// </summary>
-    public class PlaceholderDto
+    public class GetPlaceholderCommand
     {
         /// <summary>
         /// Получает или задает идентификатор Placeholder.

@@ -1,6 +1,5 @@
 ﻿using MassTransit;
 using Microsoft.AspNetCore.Mvc;
-using Facade.Template.Consumers.Healthchecks;
 using System;
 using System.Net;
 using System.Threading.Tasks;
@@ -14,17 +13,6 @@ namespace Facade.Template.WebApi
     [Route("/health")]
     public class HealthController : ControllerBase
     {
-        private readonly IRequestClient<HealthcheckCommand> healthClient;
-
-        /// <summary>
-        /// Инициализирует новый экземпляр класса <see cref="HealthController"/>.
-        /// </summary>
-        /// <param name="healthClient">Клиент получения статуса службы.</param>
-        public HealthController(IRequestClient<HealthcheckCommand> healthClient)
-        {
-            this.healthClient = healthClient;
-        }
-
         /// <summary>
         /// Получить статус службы.
         /// </summary>
@@ -34,13 +22,7 @@ namespace Facade.Template.WebApi
         {
             try
             {
-                Response<HealthcheckResponse> response = await this.healthClient.GetResponse<HealthcheckResponse>(new HealthcheckCommand());
-
-                return response.Message.Result == "success" ? this.Ok() : new StatusCodeResult((int)HttpStatusCode.BadGateway);
-            }
-            catch (RequestTimeoutException)
-            {
-                return new StatusCodeResult((int)HttpStatusCode.GatewayTimeout);
+                return this.Ok();
             }
             catch (Exception)
             {

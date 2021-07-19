@@ -42,16 +42,71 @@
             Получает или задает результат проверки токена авторизации.
             </summary>
         </member>
+        <member name="T:Facade.Template.WebApi.GetAllPlaceholdersCommand">
+            <summary>
+            Команда получения списка Placeholder.
+            </summary>
+        </member>
+        <member name="T:Facade.Template.WebApi.Placeholder">
+            <summary>
+            Placeholder.
+            </summary>
+        </member>
+        <member name="M:Facade.Template.WebApi.Placeholder.#ctor(System.String)">
+            <summary>
+            �������������� ����� ��������� ������ <see cref="T:Facade.Template.WebApi.Placeholder"/>.
+            </summary>
+            <param name="id">������������� Placeholder.</param>
+        </member>
+        <member name="P:Facade.Template.WebApi.Placeholder.Id">
+            <summary>
+            �������� ������������� Placeholder.
+            </summary>
+        </member>
+        <member name="T:Facade.Template.WebApi.GetAllPlaceholdersResponse">
+            <summary>
+            Ответ на команду получения списка Placeholder.
+            </summary>
+        </member>
+        <member name="P:Facade.Template.WebApi.GetAllPlaceholdersResponse.Placeholders">
+            <summary>
+            Получает или задает список Placeholder.
+            </summary>
+        </member>
+        <member name="P:Facade.Template.WebApi.GetAllPlaceholdersResponse.Result">
+            <summary>
+            Получает или задает результат обработки команды.
+            </summary>
+        </member>
+        <member name="T:Facade.Template.WebApi.GetPlaceholderCommand">
+            <summary>
+            Команда получения Placeholder.
+            </summary>
+        </member>
+        <member name="P:Facade.Template.WebApi.GetPlaceholderCommand.Id">
+            <summary>
+            Получает или задает идентификатор Placeholder.
+            </summary>
+        </member>
+        <member name="T:Facade.Template.WebApi.GetPlaceholderResponse">
+            <summary>
+            Ответ на команду получения Placeholder.
+            </summary>
+        </member>
+        <member name="P:Facade.Template.WebApi.GetPlaceholderResponse.Placeholder">
+            <summary>
+            Получает или задает Placeholder.
+            </summary>
+        </member>
+        <member name="P:Facade.Template.WebApi.GetPlaceholderResponse.Result">
+            <summary>
+            Получает или задает результат обработки команды.
+            </summary>
+        </member>
         <member name="T:Facade.Template.WebApi.HealthController">
             <summary>
             Контроллер проверки состояния службы.
             </summary>
-        </member>
-        <member name="M:Facade.Template.WebApi.HealthController.#ctor(MassTransit.IRequestClient{Facade.Template.Consumers.Healthchecks.HealthcheckCommand})">
-            <summary>
-            Инициализирует новый экземпляр класса <see cref="T:Facade.Template.WebApi.HealthController"/>.
-            </summary>
-            <param name="healthClient">Клиент получения статуса службы.</param>
         </member>
         <member name="M:Facade.Template.WebApi.HealthController.Get">
             <summary>
@@ -64,7 +119,7 @@
             Контроллер Placeholder.
             </summary>
         </member>
-        <member name="M:Facade.Template.WebApi.PlaceholderController.#ctor(MassTransit.IRequestClient{Facade.Template.Consumers.GetPlaceholderCommand},MassTransit.IRequestClient{Facade.Template.Consumers.GetAllPlaceholdersCommand})">
+        <member name="M:Facade.Template.WebApi.PlaceholderController.#ctor(MassTransit.IRequestClient{Facade.Template.WebApi.GetPlaceholderCommand},MassTransit.IRequestClient{Facade.Template.WebApi.GetAllPlaceholdersCommand})">
             <summary>
             Инициализирует новый экземпляр класса <see cref="T:Facade.Template.WebApi.PlaceholderController"/>.
             </summary>

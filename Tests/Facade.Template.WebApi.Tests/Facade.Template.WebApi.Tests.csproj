@@ -24,7 +24,6 @@
         <AdditionalFiles Include="$(SolutionDir)\stylecop.json" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\..\Sources\Facade.Template.Consumers\Facade.Template.Consumers.csproj" />
       <ProjectReference Include="..\..\Sources\Facade.Template.WebApi\Facade.Template.WebApi.csproj" />
     </ItemGroup>
 	<ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace Facade.Template.Consumers
+﻿namespace Facade.Template.WebApi
 {
     /// <summary>
     /// Команда получения списка Placeholder.

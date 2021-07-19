@@ -1,6 +1,4 @@
-﻿using Facade.Template.Core;
-
-namespace Facade.Template.Consumers
+﻿namespace Facade.Template.WebApi
 {
     /// <summary>
     /// Ответ на команду получения Placeholder.

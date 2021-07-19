@@ -1,6 +1,6 @@
-﻿using MassTransit;
+﻿using Facade.Template.WebApi;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
-using Facade.Template.Consumers;
 using System;
 using System.Net;
 using System.Threading.Tasks;

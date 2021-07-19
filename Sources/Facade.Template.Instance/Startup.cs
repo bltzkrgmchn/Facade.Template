@@ -1,17 +1,12 @@
-﻿using MassTransit;
+﻿using Facade.Template.WebApi;
+using Facade.Template.WebApi;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Serilog;
-using Facade.Template.Consumers;
-using Facade.Template.Consumers.Healthchecks;
-using Facade.Template.Core;
-using Facade.Template.Data;
-using Facade.Template.WebApi;
-using System;
 
 namespace Facade.Template.Instance
 {
@@ -68,32 +63,14 @@ namespace Facade.Template.Instance
 
             Log.Information("Регистрация политик CORS успешно завершена.");
 
-            Log.Information("Начинается регистрация сервисов.");
-
-            // Все сервисы имеют stateless реализацию и могут быть зарегистрированы как singleton.
-            services.AddSingleton<IPlaceholderService, PlaceholderService>();
-
-            services.AddSingleton<IPlaceholderRepository, PlaceholderRepository>(o =>
-                new PlaceholderRepository(
-                    this.configuration.GetConnectionString("Placeholders"),
-                    o.GetRequiredService<ILogger<PlaceholderRepository>>()));
-
-            services.AddSingleton<GetAllPlaceholdersConsumer>();
-
-            services.AddSingleton<GetPlaceholderConsumer>();
-
-            Log.Information("Регистрация сервисов успешно завершена.");
-
             Log.Information("Начинается регистрация шины.");
 
             // Регистрация потребителей сообщений
             services.AddMassTransit(x =>
             {
-                x.AddConsumer<GetAllPlaceholdersConsumer>();
-                x.AddConsumer<GetPlaceholderConsumer>();
-                x.AddConsumer<HealthcheckConsumer>();
-
                 x.AddRequestClient<AuthorizeCommand>();
+                x.AddRequestClient<GetAllPlaceholdersCommand>();
+                x.AddRequestClient<GetPlaceholderCommand>();
 
                 x.UsingRabbitMq((context, configuration) =>
                 {
@@ -120,8 +97,6 @@ namespace Facade.Template.Instance
                 .CreateRequestClient<GetAllPlaceholdersCommand>());
             services.AddScoped(serviceProvider => serviceProvider.GetRequiredService<IBus>()
                 .CreateRequestClient<GetPlaceholderCommand>());
-            services.AddScoped(serviceProvider => serviceProvider.GetRequiredService<IBus>()
-                .CreateRequestClient<HealthcheckCommand>());
             services.AddScoped(serviceProvider => serviceProvider.GetRequiredService<IBus>()
                 .CreateRequestClient<AuthorizeCommand>());
 
