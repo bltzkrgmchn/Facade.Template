@@ -47,22 +47,6 @@
             Команда получения списка Placeholder.
             </summary>
         </member>
-        <member name="T:Facade.Template.WebApi.Placeholder">
-            <summary>
-            Placeholder.
-            </summary>
-        </member>
-        <member name="M:Facade.Template.WebApi.Placeholder.#ctor(System.String)">
-            <summary>
-            �������������� ����� ��������� ������ <see cref="T:Facade.Template.WebApi.Placeholder"/>.
-            </summary>
-            <param name="id">������������� Placeholder.</param>
-        </member>
-        <member name="P:Facade.Template.WebApi.Placeholder.Id">
-            <summary>
-            �������� ������������� Placeholder.
-            </summary>
-        </member>
         <member name="T:Facade.Template.WebApi.GetAllPlaceholdersResponse">
             <summary>
             Ответ на команду получения списка Placeholder.
@@ -113,6 +97,22 @@
             Получить статус службы.
             </summary>
             <returns>Статус службы.</returns>
+        </member>
+        <member name="T:Facade.Template.WebApi.Placeholder">
+            <summary>
+            Placeholder.
+            </summary>
+        </member>
+        <member name="M:Facade.Template.WebApi.Placeholder.#ctor(System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса <see cref="T:Facade.Template.WebApi.Placeholder"/>.
+            </summary>
+            <param name="id">������������� Placeholder.</param>
+        </member>
+        <member name="P:Facade.Template.WebApi.Placeholder.Id">
+            <summary>
+            �������� ������������� Placeholder.
+            </summary>
         </member>
         <member name="T:Facade.Template.WebApi.PlaceholderController">
             <summary>

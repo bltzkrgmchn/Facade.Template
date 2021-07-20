@@ -6,8 +6,8 @@
 using System.Reflection;
 
 [assembly: AssemblyTitle("Facade.Template")]
-[assembly: AssemblyVersion("2.0.0")]
-[assembly: AssemblyFileVersion("2.0.0")]
-[assembly: AssemblyInformationalVersion("2.0.0")]
+[assembly: AssemblyVersion("0.1.0")]
+[assembly: AssemblyFileVersion("0.1.0")]
+[assembly: AssemblyInformationalVersion("0.1.0")]
 [assembly: AssemblyCopyright("Copyright (c) Aleksey Balandin 2019 - 2021")]
 
