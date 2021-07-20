@@ -1,8 +1,6 @@
-﻿using MassTransit;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace Facade.Template.WebApi
 {
@@ -18,7 +16,7 @@ namespace Facade.Template.WebApi
         /// </summary>
         /// <returns>Статус службы.</returns>
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public IActionResult Get()
         {
             try
             {

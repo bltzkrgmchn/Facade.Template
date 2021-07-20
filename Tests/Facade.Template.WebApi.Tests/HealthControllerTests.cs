@@ -1,12 +1,10 @@
 #pragma warning disable 1591
 
-using FakeItEasy;
 using FluentAssertions;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
 using System.Net;
-using System.Threading;
 
 namespace Facade.Template.WebApi.Tests
 {

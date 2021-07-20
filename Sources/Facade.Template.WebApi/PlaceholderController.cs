@@ -1,5 +1,4 @@
-﻿using Facade.Template.WebApi;
-using MassTransit;
+﻿using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;

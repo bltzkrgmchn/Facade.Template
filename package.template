@@ -7,7 +7,7 @@
     <authors>Aleksey Balandin [https://github.com/bltzkrgmchn/]</authors>
     <projectUrl>https://github.com/bltzkrgmchn/Facade.Template</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>WabApi Template MassTransit C#</tags>
+    <tags>WabApi Template MassTransit C# Facade</tags>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
